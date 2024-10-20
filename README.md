@@ -11,3 +11,7 @@ Dependencies:
 - Wlogout
 
 ![image](https://github.com/user-attachments/assets/1de521b2-e1df-4936-a375-a8f1efc7cc6a)
+
+Todo:
+- [ ] Fix volume icon on waybar
+- [ ] Fix wlogout being wrong colorscheme
