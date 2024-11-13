@@ -1,7 +1,10 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-bottom": 0,
+  // "margin-bottom": 0,
+  // "margin-top": 5,
+  // "margin-left": 5,
+  // "margin-right": 5,
   "modules-left": [
     "clock",
     "hyprland/workspaces",
@@ -11,14 +14,16 @@
     "hyprland/window",
   ],
   "modules-right": [
-    "group/network",
     "group/sysinfo",
-    "pulseaudio",
+    "group/audio",
     "custom/powermenu",
   ],
   "group/network": {
     "orientation": "horizontal",
-    "modules": ["network#name", "network#speed"],
+    "modules": [
+      "network#name",
+      "network#speed"
+    ],
     "drawer": {
       "transition-duration": 500,
       "transition-left-to-right": false,
@@ -26,11 +31,32 @@
   },
   "group/sysinfo": {
     "orientation": "horizontal",
-    "modules": [ "temperature", "custom/space#1", "memory", "custom/space#1", "cpu" ]
+    "modules": [
+      "temperature",
+      "custom/space#1",
+      "memory",
+      "custom/space#1",
+      "cpu"
+    ]
+  },
+  "group/audio": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio",
+      "mpris",
+      "custom/space#1",
+    ],
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
   },
   "tray": {
     "icon-size": 18,
     "spacing": 10
+  },
+  "mpris": {
+    "format": "{artist} - {title}"
   },
   "hyprland/window": {
     "format": " {}",
@@ -57,7 +83,10 @@
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "persistent-workspaces": {
-      "*": 5
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
     },
     "format-icons": {
       "active": "",
@@ -66,8 +95,6 @@
   },
   "clock": {
     "interval": 1,
-    //"format": " {:%I:%M %p}", // AM PM format
-    //"format": " {:%H:%M:%S}", // 24H
     "format": " {:%H:%M   %d/%m/%y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -125,7 +152,7 @@
     "exec": "exec $HOME/.config/waybar/checkupdate.sh"
   },
   "pulseaudio": {
-    "format": "{volume}% {icon}",
+    "format": "{volume}% {icon} ",
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
@@ -143,8 +170,13 @@
     "scroll-step": 1,
     "on-click": "pavucontrol"
   },
-
-  "custom/space#1" : {
+  "custom/space#1": {
     "format": " "
+  },
+  "custom/space#2": {
+    "format": "  "
+  },
+  "custom/space#3": {
+    "format": "   "
   }
 }

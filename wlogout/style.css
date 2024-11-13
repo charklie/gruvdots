@@ -5,72 +5,98 @@ window {
   background-color: rgba(0, 0, 0, 0.4);
 }
 button {
-  color: #ffffff;
-  background-color: #1e222a;
+  color: #ebdbb2;
+  background-color: #282828;
   border-style: solid;
-  border-color: #33ccfe;
+  border-color: #a89984;
   border-width: 2px;
   border-radius: 25%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25%;
-  margin: 50px;
+  margin: 180px 40px;
+  transition-duration: 0.1s;
 }
 
 button:focus,
 button:active {
-  background-color: #06b6d4;
-  outline-style: none;
+  background-color: #282828;
 }
 
 button:hover {
-  background-color: #353c4a;
+  background-color: #ebdbb2;
+  color: #282828;
+  border-color: #282828;
 }
 
 #lock {
   background-image: image(
-    url("./icons/lock.svg"),
-    url("/usr/share/wlogout/icons/lock.png"),
-    url("/usr/local/share/wlogout/icons/lock.png")
+    url("/home/charlie/.config/wlogout/icons/lock.svg")
   );
 }
 
 #logout {
   background-image: image(
-    url("./icons/logout.svg"),
-    url("/usr/share/wlogout/icons/logout.png"),
-    url("/usr/local/share/wlogout/icons/logout.png")
+    url("/home/charlie/.config/wlogout/icons/logout.svg")
   );
 }
 
 #suspend {
   background-image: image(
-    url("./icons/suspend.svg"),
-    url("/usr/share/wlogout/icons/suspend.png"),
-    url("/usr/local/share/wlogout/icons/suspend.png")
+    url("/home/charlie/.config/wlogout/icons/suspend.svg")
   );
 }
 
 #hibernate {
   background-image: image(
-    url("./icons/hibernate.svg"),
-    url("/usr/share/wlogout/icons/hibernate.png"),
-    url("/usr/local/share/wlogout/icons/hibernate.png")
+    url("/home/charlie/.config/wlogout/icons/hibernate.svg")
   );
 }
 
 #shutdown {
   background-image: image(
-    url("./icons/shutdown.svg"),
-    url("/usr/share/wlogout/icons/shutdown.png"),
-    url("/usr/local/share/wlogout/icons/shutdown.png")
+    url("/home/charlie/.config/wlogout/icons/shutdown.svg")
   );
 }
 
 #reboot {
   background-image: image(
-    url("./icons/reboot.svg"),
-    url("/usr/share/wlogout/icons/reboot.png"),
-    url("/usr/local/share/wlogout/icons/reboot.png")
+    url("/home/charlie/.config/wlogout/icons/reboot.svg")
+  );
+}
+
+#lock:hover {
+  background-image: image(
+    url("/home/charlie/.config/wlogout/icons/lock_hover.svg")
+  );
+}
+
+#logout:hover {
+  background-image: image(
+    url("/home/charlie/.config/wlogout/icons/logout_hover.svg")
+  );
+}
+
+#suspend:hover {
+  background-image: image(
+    url("/home/charlie/.config/wlogout/icons/suspend_hover.svg")
+  );
+}
+
+#hibernate:hover {
+  background-image: image(
+    url("/home/charlie/.config/wlogout/icons/hibernate_hover.svg")
+  );
+}
+
+#shutdown:hover {
+  background-image: image(
+    url("/home/charlie/.config/wlogout/icons/shutdown_hover.svg")
+  );
+}
+
+#reboot:hover {
+  background-image: image(
+    url("/home/charlie/.config/wlogout/icons/reboot_hover.svg")
   );
 }

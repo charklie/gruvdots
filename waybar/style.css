@@ -1,3 +1,5 @@
+@import 'colorscheme.css';
+
 * {
   border: none;
   border-radius: 0;
@@ -6,20 +8,20 @@
   padding: 0;
 }
 #waybar {
-  background: #282828;
-  color: #ebdbb2;
+  background: @bg;
+  color: @fg;
   font-size: 14px;
   font-family: "JetBrainsMono Nerd Font";
 }
 
 #workspaces button {
   padding: 0 3px;
-  color: #ebdbb2;
+  color: @fg;
   font-size: 10;
 }
 
 #workspaces button.active {
-  color: #b16286;
+  color: @purple;
 }
 
 #custom-space {
@@ -29,20 +31,20 @@
 #custom-powermenu,
 #workspaces,
 #clock,
-#pulseaudio,
+#audio,
 #custom-updates,
 #tray,
 #sysinfo,
 #network.name {
   padding: 4px 8px;
-  background-color: #3c3836;
+  background-color: @bg2;
   border-radius: 3px;
   margin: 6px 4px;
 }
 
 #window {
-  color: #ebdbb2;
-  background-color: #282828
+  color: @fg;
+  background-color: @bg
 }
 
 #tray {
@@ -50,40 +52,40 @@
 }
 
 #custom-updates {
-  color: #458588;
+  color: @blue;
 }
 
 #custom-powermenu {
-  color: #fb4934;
+  color: @red;
   padding-right: 11px;
   margin-right: 8px;
 }
 
 #scratchpad {
-  color: #cffafe;
+  color: @light_blue;
   padding-right: 4px;
   padding-left: 4px;
 }
 
-#pulseaudio {
-  color: #458588;
-  padding-right: 14px;
+#pulseaudio,
+#mpris {
+  color: @blue;
 }
 
 #cpu {
-  color: #98971a;
+  color: @yellow;
 }
 
 #temperature {
-  color: #b16286;
+  color: @purple;
 }
 
 #memory {
-  color: #8ec07c;
+  color: @light_green;
 }
 
 #network {
-  color: #d79921;
+  color: @yellow;
 }
 
 #network.name {
@@ -91,8 +93,9 @@
 }
 
 #clock {
-  color: #ebdbb2;
+  color: @fg;
   margin-left: 8px;
   /* opacity: 0.7; */
   /* font-size: 18px; */
 }
+

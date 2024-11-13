@@ -1,0 +1,15 @@
+* {
+    bg0: #191724;
+    bg1: #26233a;
+    grey0: #6e6a86;
+    fg0: #e0def4;
+
+    blue: #9ccfd8;
+    red: #eb6f92;
+    orange: #f6c177;
+    green: #31748f;
+    bgStatusline3: #6e6a86;
+
+    background-color: @bg0;
+}
+
