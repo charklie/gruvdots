@@ -102,14 +102,14 @@
   background: @noti-bg-darker;
   color: @text-color;
   caret-color: @text-color;
-  border: 1px solid @noti-border-color;
+  border: 1px solid @bg;
   border-radius: 5px;
 }
 
 .inline-reply-button {
   margin-left: 4px;
   background: @noti-bg;
-  border: 1px solid @noti-border-color;
+  border: 1px solid @bg;
   border-radius: 5px;
   color: @text-color;
 }

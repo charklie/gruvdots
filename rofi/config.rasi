@@ -16,8 +16,14 @@ configuration {
 @theme "colorscheme"
 
 window {
-    height: 600;
-    width: 600;
+    height: 60%;
+    width: 22%;
+
+    anchor: west;
+    orientation: horizontal;
+    location: northwest;
+    y-offset: 480;
+    x-offset: 5;
 
     border: 1;
     border-radius: 10;

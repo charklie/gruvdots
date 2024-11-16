@@ -14,3 +14,4 @@
 @define-color gray #6e6a86;
 @define-color orange #F6c177;
 @define-color light_orange @orange;
+@define-color accent @purple;
