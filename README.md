@@ -16,6 +16,7 @@ Before actually setting these files into your .config directory, make sure to lo
 A couple files need to be set to executables, which are these:'
 
 - .config/waybar/colorscheme_selector.sh
+- .config/waybar/switch_colorscheme.sh
 - .config/hypr/restart.sh
 - .config/hypr/screenie.sh
 
