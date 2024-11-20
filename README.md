@@ -13,10 +13,11 @@ Changing keyboard layout is a must, currently it is set to colemak-se, but it is
 
 Before actually setting these files into your .config directory, make sure to look through the configurations to make sure any paths are correct and so. 
 
-A couple files need to be set to executables, which are these:
-.config/waybar/colorscheme_selector.sh
-.config/hypr/restart.sh
-.config/hypr/screenie.sh
+A couple files need to be set to executables, which are these:'
+
+- .config/waybar/colorscheme_selector.sh
+- .config/hypr/restart.sh
+- .config/hypr/screenie.sh
 
 These files are for my system, its very likely that you will need to change directories' names from /home/charlie to /home/$USER/.
 
