@@ -5,23 +5,3 @@
 
 These files are for my system, its very likely that you will need to change directories' names from /home/charlie to /home/$USER/.
 
-GTK Theme: Gruvbox-Material-Dark
-
-Dependencies:
-- Hyprland
-- Waybar
-- Rofi
-- Kitty and Kitten
-- Wlogout
-- swaybg
-- Waypaper
-- Fish + omf
-- Lunarvim
-- Pavucontrol
-
-GTK Themes needed to use theme switcher:
-- Dracula
-- Gruvbox-Material-Dark
-- Kanagawa
-- Tokyonight
-- Rose-pine-gtk
