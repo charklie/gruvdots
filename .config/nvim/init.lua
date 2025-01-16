@@ -3,6 +3,8 @@
 -- This is the entry point of your config.
 -- ---------------------------------------
 
+
+
 local function load_source(source)
   local status_ok, error = pcall(require, source)
   if not status_ok then
@@ -43,5 +45,40 @@ load_sources({
   "base.3-autocmds", -- critical stuff, don't change the execution order.
 })
 
-load_colorscheme_async(vim.g.default_colorscheme)
 load_sources_async({ "base.4-mappings" })
+load_colorscheme_async(vim.g.default_colorscheme)
+
+local io = require("io")
+
+local function get_file_contents(filePath)
+  if not filePath then return "" end
+  local content = ""
+  local file = io.open(filePath, "r")
+  if file then
+    while true do
+      local line = file:read("*l")
+      if not line then break end
+      content = content .. line .. "\n"
+    end
+    file:close()
+  else
+    error("Failed to open file: " .. filePath)
+  end
+
+  return content
+end
+
+local content_colorscheme_file = get_file_contents("/home/charlie/.config/waybar/active_colorscheme.txt")
+
+if content_colorscheme_file ~= "gruvbox_light" or content_colorscheme_file ~= "gruvbox_light" then
+  vim.g.default_colorscheme = content_colorscheme_file
+  vim.o.background = "dark"
+elseif content_colorscheme_file == "gruvbox_dark" then
+  vim.g.default_colorscheme = "gruvbox"
+  vim.o.background = "dark"
+elseif content_colorscheme_file == "gruvbox_light" then
+  vim.g.default_colorscheme = "gruvbox"
+  vim.o.background = "light"
+end
+
+vim.cmd("colorscheme " .. vim.g.default_colorscheme)

@@ -125,7 +125,7 @@ function M.get_icon(icon_name, fallback_to_empty_string)
   if not M[icon_pack] then -- only if not cached already.
     if icon_pack == "icons" then
       M.icons = require("base.icons.icons")
-    elseif icon_pack =="fallback_icons" then
+    elseif icon_pack == "fallback_icons" then
       M.fallback_icons = require("base.icons.fallback_icons")
     end
   end
@@ -240,7 +240,6 @@ function M.set_mappings(map_table, base)
   -- if which-key is loaded already, register
   if package.loaded["which-key"] then M.which_key_register() end
 end
-
 
 --- Add syntax matching rules for highlighting URLs/URIs.
 function M.set_url_effect()

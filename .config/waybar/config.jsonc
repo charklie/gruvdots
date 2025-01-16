@@ -15,6 +15,7 @@
   ],
   "modules-right": [
     "group/sysinfo",
+    "battery",
     "group/audio",
     "custom/powermenu",
   ],
@@ -44,12 +45,12 @@
     "modules": [
       "pulseaudio",
       "mpris",
-      "custom/space#1",
+      "custom/space#1"
     ],
     "drawer": {
       "transition-duration": 500,
       "transition-left-to-right": false
-    },
+    }
   },
   "tray": {
     "icon-size": 18,
@@ -59,18 +60,16 @@
     "format": "{artist} - {title}"
   },
   "hyprland/window": {
-    "format": " {}",
+    //"format": "title: {title}, initialTitle {initialTitle}, class: {class}, initialClass: {initialClass},",
+    "format": "{}",
+    "separate-outputs": false,
     "rewrite": {
-      "(\\d\\. )?(.*) - Mozilla Firefox": "<span color=\"#4285F4\"></span>  $2 ",
-      "nvim (.*)": "<span color=\"#57A143\"></span>  $1",
-      "nvim": "<span color=\"#57A143\">  Neovim</span> ",
-      "ranger(.*)": "<span color=\"#ffffff\"></span>  $1",
-      "Search(.*)": "<span color=\"#a855f7\"></span>  Search$1",
-    },
-    "separate-outputs": false
+		  "(.*) - Mozilla Firefox": "  $1",
+		  "(.*) - fish": "> [$1]"
+	  }
   },
   "hyprland/submap": {
-    "format": "✌️ {}",
+    "format": "  {}",
     "max-length": 8,
     "tooltip": true
   },
@@ -133,11 +132,11 @@
     ]
   },
   "memory": {
-    "format": "󰍛 {}%",
+    "format": "  {}%",
     "tooltip": "false"
   },
   "cpu": {
-    "format": " {usage}%",
+    "format": "󰍛 {usage}%",
     "tooltip": "false"
   },
   "custom/powermenu": {
@@ -169,6 +168,22 @@
     },
     "scroll-step": 1,
     "on-click": "pavucontrol"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󱟦 {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-full": "󰁹 {capacity}%",
+    "format-icons": [
+      "󰁻",
+      "󰁽",
+      "󰂁"
+    ]
   },
   "custom/space#1": {
     "format": " "

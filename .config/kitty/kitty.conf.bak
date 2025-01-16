@@ -14,9 +14,11 @@ background_opacity 1
 
 window_padding_width 5
 
+allow_remote_control yes
+
 
 # BEGIN_KITTY_THEME
-# Gruvbox Light
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
 

@@ -1,0 +1,16 @@
+[window]
+padding.x = 10
+padding.y = 10
+dynamic_padding = true
+
+decorations = "Full"
+decorations_theme_variant = "Light" # "Dark"
+
+[font]
+
+normal.family = "Fira Code"
+bold.family = "Fira Code"
+italic.family = "Fira Code"
+bold_italic.family = "Fira Code"
+
+size = 15.0

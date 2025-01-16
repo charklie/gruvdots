@@ -38,8 +38,8 @@ return {
     event = "User BaseDefered",
     cmd = { "Yazi", "Yazi cwd", "Yazi toggle" },
     opts = {
-        open_for_directories = true,
-        floating_window_scaling_factor = (is_android and 1.0) or 0.71
+      open_for_directories = true,
+      floating_window_scaling_factor = (is_android and 1.0) or 0.71
     },
   },
 
@@ -71,8 +71,8 @@ return {
 
       -- Don't chdir for certain buffers
       exclude_chdir = {
-        filetype = {"", "OverseerList", "alpha"},
-        buftype = {"nofile", "terminal"},
+        filetype = { "", "OverseerList", "alpha" },
+        buftype = { "nofile", "terminal" },
       },
 
       --ignore_lsp = { "lua_ls" },
@@ -710,7 +710,7 @@ return {
       "DistroUpdateRevert"
     },
     opts = {
-        channel = "stable" -- stable/nightly
+      channel = "stable" -- stable/nightly
     }
   },
 

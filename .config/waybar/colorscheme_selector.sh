@@ -7,6 +7,6 @@ case "$CHOSEN" in
 "Gruvbox (Dark)") "$HOME/.config/waybar/switch_colorscheme.sh" gruvbox_dark ;;
 "Gruvbox (Light)") "$HOME/.config/waybar/switch_colorscheme.sh" gruvbox_light ;;
 "Tokyo Night (Storm)") "$HOME/.config/waybar/switch_colorscheme.sh" tokyonight ;;
-"Rosé Pine") "$HOME/.config/waybar/switch_colorscheme.sh" rosepine ;;
+"Rosé Pine") "$HOME/.config/waybar/switch_colorscheme.sh" rose-pine ;;
 "Kanagawa") "$HOME/.config/waybar/switch_colorscheme.sh" kanagawa ;;
 esac

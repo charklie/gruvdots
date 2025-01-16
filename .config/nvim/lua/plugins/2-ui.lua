@@ -61,16 +61,16 @@ return {
       local dashboard = require("alpha.themes.dashboard")
 
       -- Header
-      -- dashboard.section.header.val = {
-      --   "                                                                     ",
-      --   "       ████ ██████           █████      ██                     ",
-      --   "      ███████████             █████                             ",
-      --   "      █████████ ███████████████████ ███   ███████████   ",
-      --   "     █████████  ███    █████████████ █████ ██████████████   ",
-      --   "    █████████ ██████████ █████████ █████ █████ ████ █████   ",
-      --   "  ███████████ ███    ███ █████████ █████ █████ ████ █████  ",
-      --   " ██████  █████████████████████ ████ █████ █████ ████ ██████ ",
-      -- }
+      dashboard.section.header.val = {
+        "                                                                     ",
+        "       ████ ██████           █████      ██                     ",
+        "      ███████████             █████                             ",
+        "      █████████ ███████████████████ ███   ███████████   ",
+        "     █████████  ███    █████████████ █████ ██████████████   ",
+        "    █████████ ██████████ █████████ █████ █████ ████ █████   ",
+        "  ███████████ ███    ███ █████████ █████ █████ ████ █████  ",
+        " ██████  █████████████████████ ████ █████ █████ ████ ██████ ",
+      }
       -- dashboard.section.header.val = {
       --   '                                        ▟▙            ',
       --   '                                        ▝▘            ',
@@ -195,7 +195,7 @@ return {
         desc = "Add Alpha dashboard footer",
         once = true,
         callback = function()
-          local  footer_icon = require("base.utils").get_icon("GreeterPlug")
+          local footer_icon = require("base.utils").get_icon("GreeterPlug")
           local stats = require("lazy").stats()
           stats.real_cputime = not is_windows
           local ms = math.floor(stats.startuptime * 100 + 0.5) / 100
@@ -525,7 +525,7 @@ return {
   --  We don't use it for:
   --  * LSP status: We use a heirline component for this.
   --  * Search results: We use a heirline component for this.
-  {
+  --[[{
     "folke/noice.nvim",
     event = "User BaseDefered",
     opts = function()
@@ -556,7 +556,7 @@ return {
         },
       }
     end
-  },
+  },]]
 
   --  UI icons [icons]
   --  https://github.com/nvim-tree/nvim-web-devicons

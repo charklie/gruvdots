@@ -22,7 +22,7 @@ window {
     anchor: west;
     orientation: horizontal;
     location: northwest;
-    y-offset: 480;
+    y-offset: 6;
     x-offset: 5;
 
     border: 1;
